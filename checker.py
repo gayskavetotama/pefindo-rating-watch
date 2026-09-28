@@ -174,7 +174,7 @@ def load_watchlist():
         raw = LOCAL_WATCHLIST.read_text(encoding="utf-8")
     if not raw:
         return {}, {}
-    w = json.loads(raw)
+    w = json.loads(raw.lstrip("﻿"))
     return ({k.upper(): v for k, v in w.get("tickers", {}).items()},
             {k.lower(): v for k, v in w.get("keywords", {}).items()})
 
