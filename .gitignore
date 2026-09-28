@@ -1,0 +1,4 @@
+# Holdings are internal: the watchlist lives in the WATCHLIST GitHub secret, never in the repo.
+watchlist.json
+secrets.local.txt
+__pycache__/

@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PEFINDO Rating Watch</title>
+<meta name="description" content="Upgrades, downgrades and outlook changes from PEFINDO, refreshed every 30 minutes.">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Rating Watch">
+<meta name="theme-color" content="#0f2742">
+<style>
+:root{
+  --bg:#f5f6f8; --surface:#fff; --ink:#15202b; --muted:#5f6b7a; --line:#e3e6ea;
+  --down:#c0392b; --down-bg:#fbeae8; --up:#1e7d4a; --up-bg:#e5f4ec;
+  --neutral:#8a6d00; --neutral-bg:#fbf4dc; --accent:#0f2742; --watch:#c0392b;
+  --chip:#eef1f4;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0e1319; --surface:#161d26; --ink:#e6ebf0; --muted:#95a1af; --line:#26313d;
+    --down:#ff7a6b; --down-bg:#3a1f1c; --up:#5fd39a; --up-bg:#16301f;
+    --neutral:#e3c35a; --neutral-bg:#342c12; --accent:#8fb8e8; --watch:#ff7a6b; --chip:#1f2833;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0e1319; --surface:#161d26; --ink:#e6ebf0; --muted:#95a1af; --line:#26313d;
+  --down:#ff7a6b; --down-bg:#3a1f1c; --up:#5fd39a; --up-bg:#16301f;
+  --neutral:#e3c35a; --neutral-bg:#342c12; --accent:#8fb8e8; --watch:#ff7a6b; --chip:#1f2833;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:960px;margin:0 auto;padding:16px 16px calc(24px + env(safe-area-inset-bottom))}
+header{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+h1{font-size:20px;margin:0}
+.sub{color:var(--muted);font-size:13px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:16px 0}
+@media (max-width:640px){.kpis{grid-template-columns:repeat(2,1fr)}}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.kpi .v{font-size:24px;font-weight:650;font-variant-numeric:tabular-nums}
+.kpi .l{font-size:12px;color:var(--muted)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px}
+.chart svg{width:100%;height:auto;display:block}
+.legend{display:flex;gap:14px;font-size:12px;color:var(--muted);margin-bottom:4px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+.controls{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 10px;align-items:center}
+.seg{display:flex;flex-wrap:wrap;gap:6px}
+.seg button,.toggle{border:1px solid var(--line);background:var(--chip);color:var(--ink);border-radius:999px;padding:6px 12px;font:inherit;font-size:13px;cursor:pointer}
+.seg button[aria-pressed="true"],.toggle[aria-pressed="true"]{background:var(--accent);color:var(--surface);border-color:var(--accent)}
+input[type=search],select,textarea{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:7px 10px}
+input[type=search]{flex:1;min-width:160px}
+.list{display:flex;flex-direction:column;gap:8px}
+.row{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--line);border-radius:10px;padding:10px 12px}
+.row.DOWN{border-left-color:var(--down)} .row.UP{border-left-color:var(--up)}
+.row.OUTLOOK,.row.WATCH,.row.WITHDRAWN{border-left-color:var(--neutral)}
+.row.held{box-shadow:0 0 0 1px var(--watch) inset}
+.top{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.tk{font-weight:700;letter-spacing:.3px}
+.tk a{color:inherit;text-decoration:none}
+.co{color:var(--muted);font-size:13px}
+.date{margin-left:auto;color:var(--muted);font-size:12px;font-variant-numeric:tabular-nums}
+.badge{font-size:11px;font-weight:650;padding:2px 7px;border-radius:5px;white-space:nowrap}
+.b-DOWN{background:var(--down-bg);color:var(--down)} .b-UP{background:var(--up-bg);color:var(--up)}
+.b-OUTLOOK,.b-WATCH,.b-WITHDRAWN{background:var(--neutral-bg);color:var(--neutral)}
+.b-none{background:var(--chip);color:var(--muted)}
+.b-held{background:var(--watch);color:var(--surface)}
+.title{margin-top:4px;font-size:14px}
+.meta{font-size:12px;color:var(--muted);margin-top:2px}
+.more{display:block;margin:12px auto;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:8px;padding:8px 16px;font:inherit;cursor:pointer}
+details{margin-top:16px}
+summary{cursor:pointer;color:var(--muted);font-size:13px}
+textarea{width:100%;min-height:140px;margin-top:8px;font-family:ui-monospace,Consolas,monospace;font-size:13px}
+.empty{color:var(--muted);text-align:center;padding:24px}
+a{color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>PEFINDO Rating Watch</h1>
+    <span class="sub" id="updated">Loading…</span>
+  </header>
+
+  <div class="kpis" id="kpis"></div>
+
+  <div class="card chart">
+    <div class="legend"><span><i style="background:var(--up)"></i>Upgrades</span><span><i style="background:var(--down)"></i>Downgrades</span><span id="chartNote"></span></div>
+    <div id="chart"></div>
+  </div>
+
+  <div class="controls">
+    <div class="seg" id="kindSeg" role="group" aria-label="Action type">
+      <button data-k="changes" aria-pressed="true">All changes</button>
+      <button data-k="DOWN">Downgrades</button>
+      <button data-k="UP">Upgrades</button>
+      <button data-k="OTHER">Outlook / Watch</button>
+      <button data-k="all">Everything</button>
+    </div>
+  </div>
+  <div class="controls">
+    <input type="search" id="q" placeholder="Search ticker, company, industry…">
+    <select id="range" aria-label="Period">
+      <option value="90">Last 90 days</option>
+      <option value="365" selected>Last 12 months</option>
+      <option value="1825">Last 5 years</option>
+      <option value="99999">All history</option>
+    </select>
+    <button class="toggle" id="heldOnly" aria-pressed="false">★ Watchlist only</button>
+  </div>
+
+  <div class="list" id="list"></div>
+  <button class="more" id="more" hidden>Show more</button>
+
+  <details id="wlBox">
+    <summary>Watchlist (<span id="wlCount">0</span> names, saved on this device only)</summary>
+    <p class="sub">One per line: <code>TICKER = label</code>. Lines starting with <code>~</code> match a name keyword instead of a ticker (e.g. <code>~some bank = Deposit</code>). Your watchlist stays on this device and is never uploaded.</p>
+    <textarea id="wlText" spellcheck="false"></textarea>
+    <button class="more" id="wlSave">Save watchlist</button>
+  </details>
+  <p class="sub" style="margin-top:16px">Source: PEFINDO public rating action feed. Refreshed every ~30 minutes by an automated monitor. Not an official PEFINDO product.</p>
+</div>
+
+<script>
+const KIND_LABEL={DOWN:"Downgrade",UP:"Upgrade",OUTLOOK:"Outlook",WATCH:"Credit watch",WITHDRAWN:"Withdrawn"};
+const COMPANY="https://www.pefindo.com/rating-action-reports/rating-report/";
+let rows=[], wl={tickers:{},keywords:{}}, state={kind:"changes",q:"",range:365,held:false,shown:60};
+
+function store(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch(e){return null}}
+
+// Watchlist: from URL hash (#w=...) once, else from this device's storage.
+function parseWl(text){
+  const out={tickers:{},keywords:{}};
+  text.split(/\n|,/).map(s=>s.trim()).filter(Boolean).forEach(line=>{
+    const [k,...rest]=line.split("="); const key=k.trim(), label=(rest.join("=").trim())||"Watchlist";
+    if(key.startsWith("~")) out.keywords[key.slice(1).trim().toLowerCase()]=label;
+    else out.tickers[key.toUpperCase()]=label;
+  });
+  return out;
+}
+function wlToText(w){
+  return Object.entries(w.tickers).map(([k,v])=>`${k} = ${v}`)
+    .concat(Object.entries(w.keywords).map(([k,v])=>`~${k} = ${v}`)).join("\n");
+}
+function loadWl(){
+  const m=location.hash.match(/[#&]w=([^&]*)/);
+  if(m){ const t=decodeURIComponent(m[1]); store("wl",t); history.replaceState(null,"",location.pathname); }
+  const t=store("wl")||""; wl=parseWl(t);
+  document.getElementById("wlText").value=wlToText(wl);
+  document.getElementById("wlCount").textContent=Object.keys(wl.tickers).length+Object.keys(wl.keywords).length;
+}
+function heldTag(r){
+  if(wl.tickers[r.ticker]) return wl.tickers[r.ticker];
+  const blob=(r.company+" "+r.title).toLowerCase();
+  for(const [k,v] of Object.entries(wl.keywords)) if(blob.includes(k)) return v;
+  return null;
+}
+
+function daysAgo(d){ return (Date.now()-new Date(d+"T00:00:00+07:00"))/864e5; }
+function esc(s){ return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
+
+function kpis(){
+  const r90=rows.filter(r=>daysAgo(r.date)<=90);
+  const c=k=>r90.filter(r=>r.kind===k).length;
+  const heldHits=r90.filter(r=>r.kind&&r.held).length;
+  const items=[["Downgrades · 90d",c("DOWN"),"var(--down)"],["Upgrades · 90d",c("UP"),"var(--up)"],
+    ["Outlook / watch · 90d",c("OUTLOOK")+c("WATCH")+c("WITHDRAWN"),"var(--neutral)"],["Watchlist changes · 90d",heldHits,"var(--watch)"]];
+  document.getElementById("kpis").innerHTML=items.map(([l,v,col])=>
+    `<div class="kpi"><div class="v" style="color:${col}">${v}</div><div class="l">${l}</div></div>`).join("");
+}
+
+function chart(){
+  const months=[]; const now=new Date();
+  for(let i=23;i>=0;i--){const d=new Date(now.getFullYear(),now.getMonth()-i,1);months.push(d.toISOString().slice(0,7));}
+  const up=Object.fromEntries(months.map(m=>[m,0])), dn=Object.fromEntries(months.map(m=>[m,0]));
+  rows.forEach(r=>{const m=r.date.slice(0,7); if(m in up){ if(r.kind==="UP")up[m]++; if(r.kind==="DOWN")dn[m]++; }});
+  const max=Math.max(1,...months.map(m=>Math.max(up[m],dn[m])));
+  const W=720,H=180,pad=22,mid=H/2,bw=(W-pad*2)/months.length;
+  let s=`<svg viewBox="0 0 ${W} ${H+18}" role="img" aria-label="Monthly upgrades and downgrades, last 24 months">`;
+  s+=`<line x1="${pad}" x2="${W-pad}" y1="${mid}" y2="${mid}" stroke="var(--line)"/>`;
+  months.forEach((m,i)=>{
+    const x=pad+i*bw+bw*0.15, w=bw*0.7, hu=up[m]/max*(mid-6), hd=dn[m]/max*(mid-6);
+    if(hu) s+=`<rect x="${x}" y="${mid-hu}" width="${w}" height="${hu}" rx="2" fill="var(--up)"><title>${m}: ${up[m]} upgrades</title></rect>`;
+    if(hd) s+=`<rect x="${x}" y="${mid}" width="${w}" height="${hd}" rx="2" fill="var(--down)"><title>${m}: ${dn[m]} downgrades</title></rect>`;
+    if(i%3===0) s+=`<text x="${x+w/2}" y="${H+14}" font-size="11" text-anchor="middle" fill="var(--muted)">${m.slice(2).replace("-","/")}</text>`;
+  });
+  s+=`<text x="${pad}" y="12" font-size="11" fill="var(--muted)">max ${max}/month</text></svg>`;
+  document.getElementById("chart").innerHTML=s;
+  document.getElementById("chartNote").textContent="last 24 months, rating actions (issuer + issue level)";
+}
+
+function filtered(){
+  const q=state.q.toLowerCase();
+  return rows.filter(r=>{
+    if(daysAgo(r.date)>state.range) return false;
+    if(state.kind==="changes"&&!r.kind) return false;
+    if(state.kind==="DOWN"&&r.kind!=="DOWN") return false;
+    if(state.kind==="UP"&&r.kind!=="UP") return false;
+    if(state.kind==="OTHER"&&!["OUTLOOK","WATCH","WITHDRAWN"].includes(r.kind)) return false;
+    if(state.held&&!r.held) return false;
+    if(q&&!(r.ticker+" "+r.company+" "+r.industry+" "+r.title).toLowerCase().includes(q)) return false;
+    return true;
+  });
+}
+
+function render(){
+  const list=filtered(), el=document.getElementById("list");
+  if(!list.length){ el.innerHTML=`<div class="empty">No matching rating actions.</div>`; document.getElementById("more").hidden=true; return; }
+  el.innerHTML=list.slice(0,state.shown).map(r=>{
+    const move=r.to?` ${esc(r.from)} → ${esc(r.to)}`:"";
+    const kb=r.kind?`<span class="badge b-${r.kind}">${KIND_LABEL[r.kind]}${move}</span>`:`<span class="badge b-none">${esc(r.action||"—")}</span>`;
+    const hb=r.held?`<span class="badge b-held">★ ${esc(r.held)}</span>`:"";
+    return `<div class="row ${r.kind||""} ${r.held?"held":""}">
+      <div class="top"><span class="tk"><a href="${COMPANY+encodeURIComponent(r.ticker)}" target="_blank" rel="noopener">${esc(r.ticker)}</a></span>${kb}${hb}<span class="date">${r.date}</span></div>
+      <div class="co">${esc(r.company)}</div>
+      <div class="title">${esc(r.title)}</div>
+      <div class="meta">${esc(r.industry)}${r.kind&&r.action?" · "+esc(r.action):""}</div></div>`;
+  }).join("");
+  document.getElementById("more").hidden=list.length<=state.shown;
+}
+
+function refreshHeld(){ rows.forEach(r=>r.held=heldTag(r)); kpis(); render(); }
+
+document.getElementById("kindSeg").addEventListener("click",e=>{
+  const b=e.target.closest("button"); if(!b) return;
+  document.querySelectorAll("#kindSeg button").forEach(x=>x.setAttribute("aria-pressed",x===b));
+  state.kind=b.dataset.k; state.shown=60; render();
+});
+document.getElementById("q").addEventListener("input",e=>{state.q=e.target.value;state.shown=60;render();});
+document.getElementById("range").addEventListener("change",e=>{state.range=+e.target.value;state.shown=60;render();});
+document.getElementById("heldOnly").addEventListener("click",e=>{
+  state.held=!state.held; e.currentTarget.setAttribute("aria-pressed",state.held); store("heldOnly",state.held?"1":"0"); render();
+});
+document.getElementById("more").addEventListener("click",()=>{state.shown+=60;render();});
+document.getElementById("wlSave").addEventListener("click",()=>{
+  const t=document.getElementById("wlText").value; store("wl",t); loadWl(); refreshHeld();
+});
+
+loadWl();
+if(store("heldOnly")==="1"){state.held=true;document.getElementById("heldOnly").setAttribute("aria-pressed","true");}
+fetch("data.json",{cache:"no-cache"}).then(r=>r.json()).then(d=>{
+  const c=d.columns;
+  rows=d.rows.map(a=>Object.fromEntries(c.map((k,i)=>[k,a[i]])));
+  const up=new Date(d.updated);
+  document.getElementById("updated").textContent="Updated "+up.toLocaleString(undefined,{dateStyle:"medium",timeStyle:"short"})+" · "+rows.length.toLocaleString()+" actions";
+  chart(); refreshHeld();
+}).catch(()=>{document.getElementById("updated").textContent="Could not load data.json";});
+</script>
+</body>
+</html>

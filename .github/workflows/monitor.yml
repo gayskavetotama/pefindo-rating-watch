@@ -1,0 +1,57 @@
+name: PEFINDO rating monitor
+
+on:
+  schedule:
+    - cron: "7,37 * * * *"      # every 30 min (GitHub may delay a few minutes)
+    - cron: "0 20 * * 6"        # Sunday 03:00 WIB full dashboard resync
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "run | dry-run | resync | test"
+        default: run
+      ticker:
+        description: "Ticker for test mode (e.g. WSKT)"
+        default: WSKT
+
+permissions:
+  contents: write
+
+concurrency:
+  group: monitor
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+      SMTP_USER: ${{ secrets.SMTP_USER }}
+      SMTP_PASS: ${{ secrets.SMTP_PASS }}
+      MAIL_TO: ${{ secrets.MAIL_TO }}
+      WATCHLIST: ${{ secrets.WATCHLIST }}
+      DASHBOARD_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run checker
+        run: |
+          MODE="${{ inputs.mode || 'run' }}"
+          if [ "${{ github.event.schedule }}" = "0 20 * * 6" ]; then MODE=resync; fi
+          case "$MODE" in
+            dry-run) python checker.py --dry-run ;;
+            resync)  python checker.py --resync ;;
+            test)    python checker.py --test "${{ inputs.ticker }}" ;;
+            *)       python checker.py ;;
+          esac
+
+      - name: Commit state and dashboard data
+        if: always()
+        run: |
+          git config user.name "rating-monitor-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add state.json docs/data.json 2>/dev/null || true
+          git diff --cached --quiet || { git commit -m "monitor: update $(date -u +%FT%TZ)" && git push; }

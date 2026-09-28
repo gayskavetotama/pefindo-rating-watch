@@ -1,0 +1,12 @@
+{
+  "name": "PEFINDO Rating Watch",
+  "short_name": "Rating Watch",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0f2742",
+  "theme_color": "#0f2742",
+  "icons": [
+    {"src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable"},
+    {"src": "icon-180.png", "sizes": "180x180", "type": "image/png"}
+  ]
+}
