@@ -14,7 +14,9 @@ Usage:
 
 Config (environment variables / GitHub secrets):
   NTFY_TOPIC    ntfy topic name (keep it unguessable)
-  SMTP_USER     Gmail address used to send
+  MAIL_WEBHOOK  Apps Script web-app URL that sends the email (see apps-script/Code.gs)
+  MAIL_KEY      shared key the Apps Script checks
+  SMTP_USER     Gmail address used to send (fallback when MAIL_WEBHOOK is unset)
   SMTP_PASS     Gmail app password
   MAIL_TO       recipient(s), comma separated
   WATCHLIST     JSON: {"tickers": {"ABCD": "Bond", ...}, "keywords": {"some bank": "Deposit", ...}}
@@ -54,7 +56,7 @@ WIB = timezone(timedelta(hours=7))
 # Long-term national scale, best to worst, for notch counting.
 SCALE = ["idAAA", "idAA+", "idAA", "idAA-", "idA+", "idA", "idA-",
          "idBBB+", "idBBB", "idBBB-", "idBB+", "idBB", "idBB-",
-         "idB+", "idB", "idB-", "idCCC", "idCC", "idC", "idSD", "idD"]
+         "idB+", "idB", "idB-", "idCCC", "idSD", "idD"]  # PEFINDO scale has no idCC / idC
 INVESTMENT_GRADE_FLOOR = SCALE.index("idBBB-")
 RATING_RE = r"id(?:AAA|AA|A|BBB|BB|B|CCC|CC|C|SD|D)[+-]?"
 MOVE_RE = re.compile(
@@ -281,9 +283,38 @@ def send_ntfy_text(title, body, prio=3):
 
 
 def send_email(alerts, subject=None, intro=""):
+    """Send via the Apps Script relay (MAIL_WEBHOOK) if set, else Gmail SMTP.
+
+    The relay gets two renderings: 'team' (with watchlist flags) and 'others'
+    (holdings stripped); the script decides which recipients get which.
+    """
+    hook, key = os.environ.get("MAIL_WEBHOOK"), os.environ.get("MAIL_KEY")
+    if hook and key:
+        public = [dict(a, watch=None) for a in alerts]
+        s_team, h_team = render_email(alerts, subject, intro)
+        s_pub, h_pub = render_email(public, subject, intro)
+        payload = json.dumps({"key": key, "team": {"subject": s_team, "html": h_team},
+                              "others": {"subject": s_pub, "html": h_pub}}).encode()
+        req = urllib.request.Request(hook, data=payload,
+                                     headers={"Content-Type": "application/json"})
+        reply = urllib.request.urlopen(req, timeout=60).read().decode("utf-8", "replace")
+        if not reply.startswith("OK"):
+            raise RuntimeError(f"Mail relay refused: {reply[:200]}")
+        print(f"  email relay: {reply[:100]}")
+        return
     user, pw, to = (os.environ.get(k) for k in ("SMTP_USER", "SMTP_PASS", "MAIL_TO"))
     if not (user and pw and to):
         return
+    subject, body = render_email(alerts, subject, intro)
+    msg = MIMEMultipart("alternative")
+    msg["Subject"], msg["From"], msg["To"] = subject, user, to
+    msg.attach(MIMEText(body, "html", "utf-8"))
+    with smtplib.SMTP_SSL("smtp.gmail.com", 465, timeout=60) as s:
+        s.login(user, pw)
+        s.sendmail(user, [x.strip() for x in to.split(",")], msg.as_string())
+
+
+def render_email(alerts, subject=None, intro=""):
     alerts = sorted(alerts, key=lambda a: (-priority(a), a["ticker"]))
     if subject is None:
         top = alerts[0]
@@ -311,12 +342,7 @@ def send_email(alerts, subject=None, intro=""):
 </div>""")
     dash = f'<p><a href="{DASHBOARD_URL}">Open dashboard</a></p>' if DASHBOARD_URL else ""
     body = f"<div style='max-width:640px'>{intro}{''.join(cards)}{dash}<p style='color:#888;font-size:12px'>Source: PEFINDO rating action feed. Automated monitor.</p></div>"
-    msg = MIMEMultipart("alternative")
-    msg["Subject"], msg["From"], msg["To"] = subject, user, to
-    msg.attach(MIMEText(body, "html", "utf-8"))
-    with smtplib.SMTP_SSL("smtp.gmail.com", 465, timeout=60) as s:
-        s.login(user, pw)
-        s.sendmail(user, [x.strip() for x in to.split(",")], msg.as_string())
+    return subject, body
 
 
 # ---------------------------------------------------------------- dashboard data
@@ -441,9 +467,10 @@ def main():
     if args.test:
         tickers, keywords = load_watchlist()
         rows = [r for r in fetch_feed(POLL_ROWS * 5) if r["ticker"].upper() == args.test.upper()]
+        changes = [r for r in rows if classify(r)]  # latest rating change, not e.g. a maturity notice
         if not rows:
             sys.exit(f"no recent action for {args.test}")
-        r = rows[0]
+        r = (changes or rows)[0]
         a = build_alert(r, classify(r) or "WATCH", tickers, keywords)
         a["company"] = "[TEST] " + a["company"]
         print(headline(a), a)
