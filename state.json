@@ -1,5 +1,7 @@
 {
  "seen": [
+  "2026-09-29|PNMP|Matured|PT Permodalan Nasional Madani has fully repaid its Sukuk Mudharabah Jangka Menen",
+  "2026-09-29|WSKT|Upgraded & Outlook Changed|PEFINDO has raised the corporate rating of PT Waskita Karya (Persero) Tbk (WSKT)",
   "2026-09-28|TPIA|Matured|PT Chandra Asri Pacific Tbk has fully repaid its Obligasi Berkelanjutan IV Chand",
   "2026-09-28|TUFI|Matured|PT Mandiri Tunas Finance has fully repaid its Obligasi Berkelanjutan VI Mandiri ",
   "2026-09-28|WSKT|Matured|PT Waskita Karya (Persero) Tbk has fully repaid its Obligasi III Waskita Karya T",
@@ -2997,10 +2999,8 @@
   "2021-09-03|DIPP1||\"idAAA(sf)\" rating for Class A EBA DIPP1",
   "2021-09-03|VOKS||PT Voksel Electric Tbk rated \"idBBB+\" with stable outlook",
   "2021-09-02|APAI||PT Angkasa Pura I (Persero)'s proposed Shelf-Registered Bond I Year 2021 and Suk",
-  "2021-09-02|MEDC||PT Medco Energi Internasional Tbk's proposed Shelf Registration Bond IV rated \"i",
-  "2021-09-02|SMFP||\"idAAA(sy)\" affirmed to PT Sarana Multigriya Finansial (Persero)'s maturing MTN ",
-  "2021-09-01|BCAF||BCA Finance's maturing bond is affirmed at \"idAAA\""
+  "2021-09-02|MEDC||PT Medco Energi Internasional Tbk's proposed Shelf Registration Bond IV rated \"i"
  ],
  "failures": 0,
- "last_success": "2026-09-29T12:35+07:00"
+ "last_success": "2026-09-29T18:33+07:00"
 }
