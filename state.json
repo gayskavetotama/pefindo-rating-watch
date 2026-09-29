@@ -1,5 +1,6 @@
 {
  "seen": [
+  "2026-09-29|DNRK|Affirmed|PT Danareksa (Persero)’s Bond VIII Year 2023 Series B (rated idAA) of IDR520 bil",
   "2026-09-29|PNMP|Matured|PT Permodalan Nasional Madani has fully repaid its Sukuk Mudharabah Jangka Menen",
   "2026-09-29|WSKT|Upgraded & Outlook Changed|PEFINDO has raised the corporate rating of PT Waskita Karya (Persero) Tbk (WSKT)",
   "2026-09-28|TPIA|Matured|PT Chandra Asri Pacific Tbk has fully repaid its Obligasi Berkelanjutan IV Chand",
@@ -2998,9 +2999,8 @@
   "2021-09-03|DNRK||Outlook \"positive\" for Danareksa, rating affirmed at \"idA\"",
   "2021-09-03|DIPP1||\"idAAA(sf)\" rating for Class A EBA DIPP1",
   "2021-09-03|VOKS||PT Voksel Electric Tbk rated \"idBBB+\" with stable outlook",
-  "2021-09-02|APAI||PT Angkasa Pura I (Persero)'s proposed Shelf-Registered Bond I Year 2021 and Suk",
-  "2021-09-02|MEDC||PT Medco Energi Internasional Tbk's proposed Shelf Registration Bond IV rated \"i"
+  "2021-09-02|APAI||PT Angkasa Pura I (Persero)'s proposed Shelf-Registered Bond I Year 2021 and Suk"
  ],
  "failures": 0,
- "last_success": "2026-09-29T18:33+07:00"
+ "last_success": "2026-09-29T23:59+07:00"
 }
