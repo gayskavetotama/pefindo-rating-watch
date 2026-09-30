@@ -1,5 +1,8 @@
 {
  "seen": [
+  "2026-09-30|BMRI|Matured|PT Bank Mandiri (Persero) Tbk has fully repaid its Obligasi Berkelanjutan I Bank",
+  "2026-09-30|INKP|Matured|PT Indah Kiat Pulp & Paper Tbk has fully repaid the following debts Obligasi Ber",
+  "2026-09-30|BIIF|Affirmed|PT Maybank Indonesia Finance (Maybank Finance)’s Shelf Registration Bond IV Phas",
   "2026-09-29|DNRK|Affirmed|PT Danareksa (Persero)’s Bond VIII Year 2023 Series B (rated idAA) of IDR520 bil",
   "2026-09-29|PNMP|Matured|PT Permodalan Nasional Madani has fully repaid its Sukuk Mudharabah Jangka Menen",
   "2026-09-29|WSKT|Upgraded & Outlook Changed|PEFINDO has raised the corporate rating of PT Waskita Karya (Persero) Tbk (WSKT)",
@@ -2996,11 +2999,8 @@
   "2021-09-06|JSRH||Jasa Raharja rated \"idAAA\" with stable outlook",
   "2021-09-06|PNMP||PNM's maturing debt instruments rated \"idA+\"",
   "2021-09-03|BNGA||Bank CIMB Niaga rated \"idAAA\" with stable outlook",
-  "2021-09-03|DNRK||Outlook \"positive\" for Danareksa, rating affirmed at \"idA\"",
-  "2021-09-03|DIPP1||\"idAAA(sf)\" rating for Class A EBA DIPP1",
-  "2021-09-03|VOKS||PT Voksel Electric Tbk rated \"idBBB+\" with stable outlook",
-  "2021-09-02|APAI||PT Angkasa Pura I (Persero)'s proposed Shelf-Registered Bond I Year 2021 and Suk"
+  "2021-09-03|DNRK||Outlook \"positive\" for Danareksa, rating affirmed at \"idA\""
  ],
  "failures": 0,
- "last_success": "2026-09-30T13:36+07:00"
+ "last_success": "2026-09-30T19:59+07:00"
 }
