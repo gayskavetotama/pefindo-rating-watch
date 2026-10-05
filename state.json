@@ -1,5 +1,8 @@
 {
  "seen": [
+  "2026-10-05|DAAZ|New Rating|PEFINDO has assigned its idA(sy) rating to PT Daaz Bara Lestari Tbk’s (DAAZ) pro",
+  "2026-10-05|OTH-SPSMFBTN07|Affirmed|PEFINDO has affirmed its idAAA(sf) rating for the Class A EBA-SP SMF-BTN07 issue",
+  "2026-10-05|MDKA|Affirmed|PEFINDO has affirmed its idA+ ratings to PT Merdeka Copper Gold Tbk (MDKA) as we",
   "2026-10-05|BBRI|Affirmed|PT Bank Rakyat Indonesia (Persero) Tbk (BBRI)’s following debt instruments will ",
   "2026-10-05|OTH-SPSMFBTN05|Affirmed|PEFINDO has affirmed its idAAA(sf) rating for the Class A EBA-SP SMF-BTN05 and i",
   "2026-10-05|PTHK|Affirmed|PT Hutama Karya (Persero) (HK)’s following debt instruments will mature on Janua",
@@ -2996,11 +2999,8 @@
   "2021-09-09|SSMM||PT Sumberdaya Sewatama rated at \"idCCC\" with \"negative\" outlook",
   "2021-09-08|BRID||PT Barata Indonesia (Persero) rated \"idD\"",
   "2021-09-08|KETR|Affirmed|PT Ketrosden Triasmitra's bond rated \"idAAA(cg)\"",
-  "2021-09-08|SMRA|Affirmed|PT Summarecon Agung Tbk rated \"idA\" with stable outlook",
-  "2021-09-07|APIA|Affirmed|PT Angkasa Pura II (Persero)'s rated \"idAA+\" with negative outlook",
-  "2021-09-07|PNBS|New Rating|Panin Dubai Syariah rated \"idA+\" with stable outlook",
-  "2021-09-07|BNLI||PT Bank Permata Tbk's rated idAAA/stable"
+  "2021-09-08|SMRA|Affirmed|PT Summarecon Agung Tbk rated \"idA\" with stable outlook"
  ],
  "failures": 0,
- "last_success": "2026-10-05T22:54+07:00"
+ "last_success": "2026-10-06T05:33+07:00"
 }
