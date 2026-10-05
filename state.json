@@ -1,5 +1,9 @@
 {
  "seen": [
+  "2026-10-05|BBRI|Affirmed|PT Bank Rakyat Indonesia (Persero) Tbk (BBRI)’s following debt instruments will ",
+  "2026-10-05|OTH-SPSMFBTN05|Affirmed|PEFINDO has affirmed its idAAA(sf) rating for the Class A EBA-SP SMF-BTN05 and i",
+  "2026-10-05|PTHK|Affirmed|PT Hutama Karya (Persero) (HK)’s following debt instruments will mature on Janua",
+  "2026-10-05|WSKT|Affirmed|PEFINDO has affirmed its idB ratings for PT Waskita Karya (Persero) Tbk (WSKT) a",
   "2026-10-02|OTMA|Withdrawn|PEFINDO has withdrawn the ratings of PT Oto Multiartha (OTO) and its outstanding",
   "2026-10-01|PPLN|Matured|PT Perusahaan Listrik Negara (Persero) has fully repaid the following debts Obli",
   "2026-09-30|WSBP|Affirmed|PEFINDO has affirmed its idB rating with Negative outlook to PT Waskita Beton Pr",
@@ -2995,12 +2999,8 @@
   "2021-09-08|SMRA|Affirmed|PT Summarecon Agung Tbk rated \"idA\" with stable outlook",
   "2021-09-07|APIA|Affirmed|PT Angkasa Pura II (Persero)'s rated \"idAA+\" with negative outlook",
   "2021-09-07|PNBS|New Rating|Panin Dubai Syariah rated \"idA+\" with stable outlook",
-  "2021-09-07|BNLI||PT Bank Permata Tbk's rated idAAA/stable",
-  "2021-09-07|DNFI|New Rating|PT Danareksa Finance rating assigned at \"idA-\"",
-  "2021-09-07|FISH|New Rating|PT FKS Multi Agro Tbk rated \"idA\" with stable outlook",
-  "2021-09-07|ISSP||PT Steel Pipe Industry of Indonesia Tbk rated \"idA-\" with stable outlook",
-  "2021-09-06|JSRH||Jasa Raharja rated \"idAAA\" with stable outlook"
+  "2021-09-07|BNLI||PT Bank Permata Tbk's rated idAAA/stable"
  ],
  "failures": 0,
- "last_success": "2026-10-05T13:53+07:00"
+ "last_success": "2026-10-05T22:54+07:00"
 }
