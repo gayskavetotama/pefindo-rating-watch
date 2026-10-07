@@ -1,5 +1,6 @@
 {
  "seen": [
+  "2026-10-07|BJBR|Affirmed|PT Bank Pembangunan Daerah Jawa Barat dan Banten Tbk (bank bjb)’s Shelf Registra",
   "2026-10-06|BMTP|Affirmed|PEFINDO has affirmed its idAAA ratings to PT Bank Mandiri Taspen and its Shelf R",
   "2026-10-06|IATA|Matured|PT Karya Pacific Energy Tbk has fully repaid the following debts Obligasi Berkel",
   "2026-10-06|LPPI|Matured|PT Lontar Papyrus Pulp & Paper Industry has fully repaid its Obligasi Berkelanju",
@@ -2998,9 +2999,8 @@
   "2021-09-13|IMPC|Affirmed|PT Impack Pratama Industri Tbk rated \"idA-\" with stable outlook",
   "2021-09-13|WIKA||PT Wijaya Karya (Persero) Tbk's new bonds issuance rated \"idA\"",
   "2021-09-10|BNTT|Affirmed|Bank NTT rated \"idA-\" with stable outlook",
-  "2021-09-10|JSMR-BMRI-EBAKIK-01|Affirmed|\"idAAA(sf)\" rating to Class A KIK EBA BBKK01 affirmed",
-  "2021-09-10|PPRO||PT PP Properti Tbk's proposed bond issuance rated at \"idBBB-\""
+  "2021-09-10|JSMR-BMRI-EBAKIK-01|Affirmed|\"idAAA(sf)\" rating to Class A KIK EBA BBKK01 affirmed"
  ],
  "failures": 0,
- "last_success": "2026-10-07T14:09+07:00"
+ "last_success": "2026-10-07T21:43+07:00"
 }
