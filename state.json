@@ -1,5 +1,9 @@
 {
  "seen": [
+  "2026-10-08|DNRK|Downgraded|PEFINDO has lowered the ratings of PT Danareksa (Persero) and its outstanding bo",
+  "2026-10-08|MORA|Affirmed|PT Ekamas Mora Republik Tbk (MORA)’s Shelf Registration Sukuk Ijarah II Phase II",
+  "2026-10-08|INKP|Affirmed|PT Indah Kiat Pulp & Paper Tbk (INKP)’s following debt instruments will mature i",
+  "2026-10-08|PLND|Affirmed|PEFINDO has affirmed its idAAA ratings to PT Pelabuhan Indonesia (Persero) or Pe",
   "2026-10-07|TOBA|Affirmed|PEFINDO has affirmed its idA ratings to PT TBS Energi Utama Tbk (TBS) and its ou",
   "2026-10-07|BJBR|Affirmed|PT Bank Pembangunan Daerah Jawa Barat dan Banten Tbk (bank bjb)’s Shelf Registra",
   "2026-10-06|BMTP|Affirmed|PEFINDO has affirmed its idAAA ratings to PT Bank Mandiri Taspen and its Shelf R",
@@ -2995,12 +2999,8 @@
   "2021-09-16|SMII||SMI maturing Bonds rated \"idAAA\"",
   "2021-09-15|BRIF||PEFINDO assigns \"idAA\"  for BRI Multifinance Indonesia's proposed MTN",
   "2021-09-15|WSBP||PT Waskita Beton Precast Tbk rated \"idBBB-\" with \"negative\" outlook",
-  "2021-09-13|ANTM|Affirmed|PT Aneka Tambang Tbk rated \"idA\"",
-  "2021-09-13|BPSS||Bank Sumsel Babel rated \"idA\" with stable outlook",
-  "2021-09-13|IMPC|Affirmed|PT Impack Pratama Industri Tbk rated \"idA-\" with stable outlook",
-  "2021-09-13|WIKA||PT Wijaya Karya (Persero) Tbk's new bonds issuance rated \"idA\"",
-  "2021-09-10|BNTT|Affirmed|Bank NTT rated \"idA-\" with stable outlook"
+  "2021-09-13|ANTM|Affirmed|PT Aneka Tambang Tbk rated \"idA\""
  ],
  "failures": 0,
- "last_success": "2026-10-08T13:35+07:00"
+ "last_success": "2026-10-08T20:59+07:00"
 }
