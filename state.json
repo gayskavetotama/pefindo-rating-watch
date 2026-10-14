@@ -1,5 +1,7 @@
 {
  "seen": [
+  "2026-10-14|KPBA|New Rating|PT Kilang Pertamina Balikpapan (KPBA) rated idAAA(sf)",
+  "2026-10-14|MDIN|New Rating|PEFINDO has assigned its idA- rating with stable outlook to PT Maxima Daya Indon",
   "2026-10-12|INKP|Matured|PT Indah Kiat Pulp & Paper Tbk fully repaid the following debts Obligasi USD Ber",
   "2026-10-12|LTLS|Affirmed|PT Lautan Luas Tbk [LTLS]’s Shelf Registration Bond III Phase II Year 2021 Serie",
   "2026-10-12|OPPM|Matured|PT OKI Pulp & Paper Mills fully repaid the following debts Obligasi Berkelanjuta",
@@ -2997,10 +2999,8 @@
   "2021-09-21|PSAB||PT J Resources Asia Pasifik Tbk's rating lowered to \"idBBB\" with outlook revised",
   "2021-09-21|IKAN||PT Perikanan Nusantara (Persero)'s rating affirmed at \"idCCC\"",
   "2021-09-21|PNMP|Upgraded & Outlook Changed|PNM's rating raised to \"idAA\", following the establishment of ultra-micro holdin",
-  "2021-09-20|DNFI||n/a",
-  "2021-09-17|LPSI||Lembaga Penjamin Simpanan rated \"idAAA\" with stable outlook",
-  "2021-09-17|PPRO||n/a"
+  "2021-09-20|DNFI||n/a"
  ],
  "failures": 0,
- "last_success": "2026-10-14T12:19+07:00"
+ "last_success": "2026-10-14T17:32+07:00"
 }
