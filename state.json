@@ -1,5 +1,8 @@
 {
  "seen": [
+  "2026-10-28|PPGD|Affirmed|PT Pegadaian’s Shelf Registration Bond V Pegadaian Phase V Year 2024 Serie B (ra",
+  "2026-10-28|SMFP|Affirmed|PT Sarana Multigriya Finansial (Persero) (SMF)’s Shelf Registered Bond VII Phase",
+  "2026-10-28|WISL|Affirmed|PT Wahana Inti Selaras’s Shelf Registration Bond I Year 2025 Series II (rated id",
   "2026-10-27|KAII|Affirmed|PEFINDO has affirmed its ratings for PT Kereta Api Indonesia (Persero) (KAI) and",
   "2026-10-27|PNMP|Matured|PT Permodalan Nasional Madani has fully repaid its Sukuk Mudharabah Berwawasan S",
   "2026-10-26|PTPP|Downgraded|PEFINDO has lowered the rating of PT Pembangunan Perumahan (Persero) Tbk (PTPP)’",
@@ -2996,11 +2999,8 @@
   "2021-10-07|PIND||PT Pindad (Persero) maturing MTN rated \"idBBB+\"",
   "2021-10-06|ERAA||PT Erajaya Swasembada Tbk rated \"idA\" with stable outlook",
   "2021-10-05|HRTA|Affirmed|PT Hartadinata Abadi Tbk rated \"idA-\" with stable outlook",
-  "2021-10-05|IIFF|Affirmed|PT Indonesia Infrastructure Finance rated \"idAAA\", outlook stable",
-  "2021-10-05|JPTR||PT Jasamarga Pandaan Tol rated \"idA+\" with stable outlook",
-  "2021-10-04|BBRI||BBRI's maturing bond rating is maintained at \"idAAA\"",
-  "2021-10-01|PLND|New Rating|PT Pelabuhan Indonesia (Persero) rated \"idAAA\" with stable outlook"
+  "2021-10-05|IIFF|Affirmed|PT Indonesia Infrastructure Finance rated \"idAAA\", outlook stable"
  ],
  "failures": 0,
- "last_success": "2026-10-28T12:26+07:00"
+ "last_success": "2026-10-28T18:34+07:00"
 }
