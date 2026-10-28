@@ -1,5 +1,7 @@
 {
  "seen": [
+  "2026-10-28|ASDP|New Rating|PEFINDO has assigned its idAA+ rating with stable outlook for PT ASDP Indonesia ",
+  "2026-10-28|BNLI|New Rating|PEFINDO has assigned its idAAA rating with stable outlook to PT Bank Permata Tbk",
   "2026-10-28|PPGD|Affirmed|PT Pegadaian’s Shelf Registration Bond V Pegadaian Phase V Year 2024 Serie B (ra",
   "2026-10-28|SMFP|Affirmed|PT Sarana Multigriya Finansial (Persero) (SMF)’s Shelf Registered Bond VII Phase",
   "2026-10-28|WISL|Affirmed|PT Wahana Inti Selaras’s Shelf Registration Bond I Year 2025 Series II (rated id",
@@ -2997,10 +2999,8 @@
   "2021-10-08|JRES||n/a",
   "2021-10-07|ZINC|Affirmed & Outlook Changed|PT Kapuas Prima Coal Tbk rated \"idBBB\", outlook revised to \"positive\"",
   "2021-10-07|PIND||PT Pindad (Persero) maturing MTN rated \"idBBB+\"",
-  "2021-10-06|ERAA||PT Erajaya Swasembada Tbk rated \"idA\" with stable outlook",
-  "2021-10-05|HRTA|Affirmed|PT Hartadinata Abadi Tbk rated \"idA-\" with stable outlook",
-  "2021-10-05|IIFF|Affirmed|PT Indonesia Infrastructure Finance rated \"idAAA\", outlook stable"
+  "2021-10-06|ERAA||PT Erajaya Swasembada Tbk rated \"idA\" with stable outlook"
  ],
  "failures": 0,
- "last_success": "2026-10-28T18:34+07:00"
+ "last_success": "2026-10-29T00:20+07:00"
 }
