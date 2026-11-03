@@ -1,5 +1,6 @@
 {
  "seen": [
+  "2026-11-03|OTH-SPSMFBTN06|Affirmed|PEFINDO has affirmed its idAAA(sf) rating for the Class A EBA-SP SMF-BTN06 issue",
   "2026-11-02|ADMF|Matured|PT Adira Dinamika Multi Finance Tbk fully repaid the following debts Obligasi Be",
   "2026-11-02|IMFI|Affirmed|PT Indomobil Finance Indonesia (Indomobil Finance)’s Shelf Registration Bond IV ",
   "2026-11-02|PMSE|New Rating|PEFINDO has assigned its idA rating with stable outlook to PT Pratama Mitra Seja",
@@ -2998,9 +2999,8 @@
   "2021-10-18|BSSB||Bank Sulselbar's maturing bond rated \"idA+\"",
   "2021-10-18|INKP||PEFINDO affirms \"idA+\" rating for maturing bond of PT Indah Kiat Pulp and Paper ",
   "2021-10-15|BRPT||PT Barito Pacific Tbk's maturing bond rated \"idA\"",
-  "2021-10-11|MCOR||\"idAAA\" rating for CCB Indonesia",
-  "2021-10-11|OTH-SPSMFBTN02|Affirmed|PEFINDO affirms \"idAAA(sf)\" rating for EBA-SP SMF-BTN02"
+  "2021-10-11|MCOR||\"idAAA\" rating for CCB Indonesia"
  ],
  "failures": 0,
- "last_success": "2026-11-03T13:34+07:00"
+ "last_success": "2026-11-03T21:37+07:00"
 }
