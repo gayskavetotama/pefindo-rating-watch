@@ -1,5 +1,6 @@
 {
  "seen": [
+  "2026-11-11|PPLN|Affirmed|PT Perusahaan Listrik Negara (Persero) (PPLN)’s following debt instruments will ",
   "2026-11-10|BEXI|Affirmed|Lembaga Pembiayaan Ekspor Indonesia (Indonesia Eximbank)’s Shelf Registration Bo",
   "2026-11-10|PNMP|Affirmed|PT Permodalan Nasional Madani (Persero)’s following debt instruments will mature",
   "2026-11-10|PRNS|Affirmed|PEFINDO has affirmed the corporate rating of Perusahaan Umum Perumahan Nasional ",
@@ -2998,9 +2999,8 @@
   "2021-11-12|DNRK||Danareksa rated \"idA\" with positive outlook",
   "2021-11-11|ADSA|New Rating|PT Angso Duo Sawit rated \"idBB+\"",
   "2021-11-11|BACA||Bank Capital's maturing subordinated bond rated \"idBBB-\"",
-  "2021-11-11|PRNS|Affirmed & Outlook Changed|PEFINDO affirms Perumnas' ratings at \"idBBB-\" with Negative outlook",
-  "2021-11-05|TUFI||PT Mandiri Tunas Finance's maturing bond affirmed at \"idAA+\""
+  "2021-11-11|PRNS|Affirmed & Outlook Changed|PEFINDO affirms Perumnas' ratings at \"idBBB-\" with Negative outlook"
  ],
  "failures": 0,
- "last_success": "2026-11-11T08:51+07:00"
+ "last_success": "2026-11-11T16:14+07:00"
 }
