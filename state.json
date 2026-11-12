@@ -1,5 +1,7 @@
 {
  "seen": [
+  "2026-11-12|LTLS|Matured|PT Lautan Luas Tbk Tbk has fully repaid its Obligasi Berkelanjutan III Lautan Lu",
+  "2026-11-12|RATU|Affirmed|PEFINDO has affirmed its idA ratings for PT Raharja Energi Cepu Tbk (RATU) as we",
   "2026-11-11|PPLN|Affirmed|PT Perusahaan Listrik Negara (Persero) (PPLN)’s following debt instruments will ",
   "2026-11-10|BEXI|Affirmed|Lembaga Pembiayaan Ekspor Indonesia (Indonesia Eximbank)’s Shelf Registration Bo",
   "2026-11-10|PNMP|Affirmed|PT Permodalan Nasional Madani (Persero)’s following debt instruments will mature",
@@ -2997,10 +2999,8 @@
   "2021-11-18|PPRO||PT PP Properti Tbk's maturing bond rated \"idBBB-\"",
   "2021-11-15|SMFP||\"idAAA\" affirmed to PT Sarana Multigriya Finansial (Persero)'s maturing bonds",
   "2021-11-12|DNRK||Danareksa rated \"idA\" with positive outlook",
-  "2021-11-11|ADSA|New Rating|PT Angso Duo Sawit rated \"idBB+\"",
-  "2021-11-11|BACA||Bank Capital's maturing subordinated bond rated \"idBBB-\"",
-  "2021-11-11|PRNS|Affirmed & Outlook Changed|PEFINDO affirms Perumnas' ratings at \"idBBB-\" with Negative outlook"
+  "2021-11-11|ADSA|New Rating|PT Angso Duo Sawit rated \"idBB+\""
  ],
  "failures": 0,
- "last_success": "2026-11-12T13:59+07:00"
+ "last_success": "2026-11-12T22:55+07:00"
 }
