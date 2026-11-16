@@ -1,5 +1,6 @@
 {
  "seen": [
+  "2026-11-16|BBNI|Affirmed|PEFINDO has affirmed its idAAA ratings for PT Bank Negara Indonesia (Persero) Tb",
   "2026-11-16|FIFA|Matured|PT Federal International Finance has fully repaid its Obligasi Berkelanjutan VI ",
   "2026-11-16|IIFF|Matured|PT Indonesia Infrastructure Finance has fully repaid its Obligasi Berkelanjutan ",
   "2026-11-12|LTLS|Matured|PT Lautan Luas Tbk has fully repaid its Obligasi Berkelanjutan III Lautan Luas T",
@@ -2998,9 +2999,8 @@
   "2021-11-27|MDLN|Withdrawn|PEFINDO has withdrawn the rating of PT Modernland Realty Tbk",
   "2021-11-24|ADMF||Ratings of Adira Finance's maturing bond and sukuk are affirmed at \"idAAA\" and \"",
   "2021-11-22|KAFN|New Rating|PT Komatsu Astra Finance rated \"idAA+\" with stable outlook",
-  "2021-11-19|PSAB||PT J Resources Asia Pasifik Tbk affirmed at \"idBBB\" with Creditwatch with Negati",
-  "2021-11-18|PPRO||PT PP Properti Tbk's maturing bond rated \"idBBB-\""
+  "2021-11-19|PSAB||PT J Resources Asia Pasifik Tbk affirmed at \"idBBB\" with Creditwatch with Negati"
  ],
  "failures": 0,
- "last_success": "2026-11-16T16:28+07:00"
+ "last_success": "2026-11-17T02:48+07:00"
 }
