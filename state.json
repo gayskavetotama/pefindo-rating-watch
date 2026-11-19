@@ -1,5 +1,8 @@
 {
  "seen": [
+  "2026-11-19|IMFI|Matured|PT Indomobil Finance Indonesia has fully repaid its Obligasi Berkelanjutan IV In",
+  "2026-11-19|JPAS|Affirmed & Outlook Changed|PEFINDO has affirmed its idA+ financial strength rating for PT Jaminan Pembiayaa",
+  "2026-11-19|PJJS|Affirmed & Outlook Changed|PEFINDO has affirmed its idA+ financial strength rating for PT Penjaminan Jamkri",
   "2026-11-19|HIFI|Affirmed|PT Hino Finance Indonesia (HFI)’s Shelf Registration Bond I Phase II Year 2026 S",
   "2026-11-19|TUFI|Affirmed|PT Mandiri Tunas Finance (MTF)’s Shelf Registration Bond V Phase III Year 2022 S",
   "2026-11-19|MTMD|New Rating|PEFINDO has assigned its idA-(sy) rating to PT Mitra Tekno Madani (MTM)’s propos",
@@ -2996,11 +2999,8 @@
   "2021-12-08|WOOD|Upgraded|PT Integra Indocabinet Tbk rated \"idA\" with stable outlook",
   "2021-12-08|PSAB||Peringkat untuk PT J Resources Asia Pasifik Tbk dipertahankan di \"idBBB\" dengan ",
   "2021-12-08|SGRO|Upgraded|PT Sampoerna Agro Tbk rated \"idA\" with stable outlook",
-  "2021-12-06|REII||PEFINDO affirms \"idAA\" rating for Indonesia Re",
-  "2021-12-06|ISSP||PT Steel Pipe Industry of Indonesia Tbk's bond rated \"idA-\"",
-  "2021-12-01|BRIS||n/a",
-  "2021-12-01|PRND||PT Perikanan Indonesia (Persero)'s maturing MTN rated \"idBB\""
+  "2021-12-06|REII||PEFINDO affirms \"idAA\" rating for Indonesia Re"
  ],
  "failures": 0,
- "last_success": "2026-11-19T16:26+07:00"
+ "last_success": "2026-11-20T01:36+07:00"
 }
