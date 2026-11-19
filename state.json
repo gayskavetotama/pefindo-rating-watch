@@ -1,5 +1,9 @@
 {
  "seen": [
+  "2026-11-19|HIFI|Affirmed|PT Hino Finance Indonesia (HFI)’s Shelf Registration Bond I Phase II Year 2026 S",
+  "2026-11-19|TUFI|Affirmed|PT Mandiri Tunas Finance (MTF)’s Shelf Registration Bond V Phase III Year 2022 S",
+  "2026-11-19|MTMD|New Rating|PEFINDO has assigned its idA-(sy) rating to PT Mitra Tekno Madani (MTM)’s propos",
+  "2026-11-19|SANF|Affirmed|PT Surya Artha Nusantara Finance’s Shelf Registration Bond V Phase II Year 2026 ",
   "2026-11-18|BSSB|Affirmed|PT Bank Pembangunan Daerah Sulawesi Selatan dan Sulawesi Barat (Bank Sulselbar)’",
   "2026-11-18|BOLD|Downgraded|PEFINDO has lowered the rating for PT Bukit Makmur Mandiri Utama (BOLD) to idB w",
   "2026-11-18|SMII|Matured|PT Sarana Multi Infrastruktur (Persero) has fully repaid its Obligasi Berkelanju",
@@ -2995,12 +2999,8 @@
   "2021-12-06|REII||PEFINDO affirms \"idAA\" rating for Indonesia Re",
   "2021-12-06|ISSP||PT Steel Pipe Industry of Indonesia Tbk's bond rated \"idA-\"",
   "2021-12-01|BRIS||n/a",
-  "2021-12-01|PRND||PT Perikanan Indonesia (Persero)'s maturing MTN rated \"idBB\"",
-  "2021-12-01|SUFI||PT Suzuki Finance Indonesia rated \"idA-\" with stable outlook",
-  "2021-12-01|WSKT||PT Waskita Karya (Persero) Tbk rated \"idBBB\" with stable outlook",
-  "2021-11-30|MEGA||Bank Mega rated \"idAA-\" with stable outlook",
-  "2021-11-29|SMAR||PT Sinar Mas Agro Resources and Technology Tbk maturing bond rated \"idA+\""
+  "2021-12-01|PRND||PT Perikanan Indonesia (Persero)'s maturing MTN rated \"idBB\""
  ],
  "failures": 0,
- "last_success": "2026-11-19T08:26+07:00"
+ "last_success": "2026-11-19T16:26+07:00"
 }
