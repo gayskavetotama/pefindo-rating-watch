@@ -1,5 +1,6 @@
 {
  "seen": [
+  "2026-11-20|STBE|New Rating|PEFINDO has assigned its idA- rating with stable outlook to PT Samuel Tumbuh Ber",
   "2026-11-19|IMFI|Matured|PT Indomobil Finance Indonesia has fully repaid its Obligasi Berkelanjutan IV In",
   "2026-11-19|JPAS|Affirmed & Outlook Changed|PEFINDO has affirmed its idA+ financial strength rating for PT Jaminan Pembiayaa",
   "2026-11-19|PJJS|Affirmed & Outlook Changed|PEFINDO has affirmed its idA+ financial strength rating for PT Penjaminan Jamkri",
@@ -2998,9 +2999,8 @@
   "2021-12-08|BPPP||Bank Papua rated \"idA-\" with stable outlook",
   "2021-12-08|WOOD|Upgraded|PT Integra Indocabinet Tbk rated \"idA\" with stable outlook",
   "2021-12-08|PSAB||Peringkat untuk PT J Resources Asia Pasifik Tbk dipertahankan di \"idBBB\" dengan ",
-  "2021-12-08|SGRO|Upgraded|PT Sampoerna Agro Tbk rated \"idA\" with stable outlook",
-  "2021-12-06|REII||PEFINDO affirms \"idAA\" rating for Indonesia Re"
+  "2021-12-08|SGRO|Upgraded|PT Sampoerna Agro Tbk rated \"idA\" with stable outlook"
  ],
  "failures": 0,
- "last_success": "2026-11-20T15:24+07:00"
+ "last_success": "2026-11-21T00:12+07:00"
 }
