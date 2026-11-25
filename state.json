@@ -1,5 +1,6 @@
 {
  "seen": [
+  "2026-11-25|MDKA|Affirmed|PT Merdeka Copper Gold Tbk (MDKA)’s Shelf Registration Bond IV Phase V Year 2024",
   "2026-11-23|APIA|Matured|PT Angkasa Pura Indonesia has fully repaid the following debts Obligasi I Angkas",
   "2026-11-23|INKP|Matured|PT Indah Kiat Pulp & Paper Tbk has fully repaid the following debts Obligasi Ber",
   "2026-11-23|MEDC|Matured|PT Medco Energi Internasional Tbk has fully repaid its Obligasi Berkelanjutan IV",
@@ -2998,9 +2999,8 @@
   "2021-12-10|ISAT|Affirmed & Outlook Changed|PT Indosat Tbk rated \"idAAA\", outlook revised to stable",
   "2021-12-10|INKA||PT Industri Kereta Api Indonesia (Persero) rated \"idBBB+\" with \"negative\" outloo",
   "2021-12-10|MDKA||PEFINDO affirmed \"idA\" rating for PT Merdeka Copper Gold Tbk",
-  "2021-12-10|PPAP||PPA's rating raised to \"idAA\" as the holding establishment signals progress towa",
-  "2021-12-10|RICO||PT Ricobana Abadi rated \"idBB+\", outlook revised to negative"
+  "2021-12-10|PPAP||PPA's rating raised to \"idAA\" as the holding establishment signals progress towa"
  ],
  "failures": 0,
- "last_success": "2026-11-25T09:59+07:00"
+ "last_success": "2026-11-25T19:37+07:00"
 }
