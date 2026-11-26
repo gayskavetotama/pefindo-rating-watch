@@ -1,5 +1,8 @@
 {
  "seen": [
+  "2026-11-26|TPIA|Affirmed|PT Chandra Asri Pacific Tbk (TPIA)’s following debt instruments will mature in t",
+  "2026-11-26|INRE|New Rating|PEFINDO has assigned its idA financial strength rating with stable outlook to PT",
+  "2026-11-26|SMFP|Matured|PT Sarana Multigriya Finansial (Persero) has fully repaid its Obligasi Berkelanj",
   "2026-11-25|MDKA|Affirmed|PT Merdeka Copper Gold Tbk (MDKA)’s Shelf Registration Bond IV Phase V Year 2024",
   "2026-11-23|APIA|Matured|PT Angkasa Pura Indonesia has fully repaid the following debts Obligasi I Angkas",
   "2026-11-23|INKP|Matured|PT Indah Kiat Pulp & Paper Tbk has fully repaid the following debts Obligasi Ber",
@@ -2996,11 +2999,8 @@
   "2021-12-13|APPR|Upgraded|PT Adhi Persada Properti rated \"idBBB-\"",
   "2021-12-13|WKTY|Affirmed & Outlook Changed|PT Wika Realty rated \"idBBB-\", outlook revised to stable",
   "2021-12-10|DNRK||Danareksa's rating raised to \"idAA",
-  "2021-12-10|ISAT|Affirmed & Outlook Changed|PT Indosat Tbk rated \"idAAA\", outlook revised to stable",
-  "2021-12-10|INKA||PT Industri Kereta Api Indonesia (Persero) rated \"idBBB+\" with \"negative\" outloo",
-  "2021-12-10|MDKA||PEFINDO affirmed \"idA\" rating for PT Merdeka Copper Gold Tbk",
-  "2021-12-10|PPAP||PPA's rating raised to \"idAA\" as the holding establishment signals progress towa"
+  "2021-12-10|ISAT|Affirmed & Outlook Changed|PT Indosat Tbk rated \"idAAA\", outlook revised to stable"
  ],
  "failures": 0,
- "last_success": "2026-11-26T11:19+07:00"
+ "last_success": "2026-11-26T21:19+07:00"
 }
