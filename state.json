@@ -1,5 +1,8 @@
 {
  "seen": [
+  "2026-11-27|BSTN|New Rating|PEFINDO has assigned its idA rating with stable outlook to PT Bank Pembangunan D",
+  "2026-11-19|MITM|New Rating|PEFINDO has assigned its idA-(sy) rating to PT Mitra Tekno Madani (MTM)’s propos",
+  "2026-08-20|MITM|New Rating|PEFINDO has assigned its idA- rating with stable outlook for PT Mitra Tekno Mada",
   "2026-11-26|TPIA|Affirmed|PT Chandra Asri Pacific Tbk (TPIA)’s following debt instruments will mature in t",
   "2026-11-26|INRE|New Rating|PEFINDO has assigned its idA financial strength rating with stable outlook to PT",
   "2026-11-26|SMFP|Matured|PT Sarana Multigriya Finansial (Persero) has fully repaid its Obligasi Berkelanj",
@@ -2996,11 +2999,8 @@
   "2021-12-14|ASDF||PT Astra Sedaya Finance's maturing bond rated \"idAAA\"",
   "2021-12-14|BNII||Maybank Indonesia's maturing bond affirmed at \"idAAA\"",
   "2021-12-14|PNMP||PNM's Shelf Registration Bond IV/2021 rated \"idAA\"",
-  "2021-12-13|APPR|Upgraded|PT Adhi Persada Properti rated \"idBBB-\"",
-  "2021-12-13|WKTY|Affirmed & Outlook Changed|PT Wika Realty rated \"idBBB-\", outlook revised to stable",
-  "2021-12-10|DNRK||Danareksa's rating raised to \"idAA",
-  "2021-12-10|ISAT|Affirmed & Outlook Changed|PT Indosat Tbk rated \"idAAA\", outlook revised to stable"
+  "2021-12-13|APPR|Upgraded|PT Adhi Persada Properti rated \"idBBB-\""
  ],
  "failures": 0,
- "last_success": "2026-11-27T12:17+07:00"
+ "last_success": "2026-11-27T22:30+07:00"
 }
